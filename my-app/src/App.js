@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Container1 from './containers/container1';
+//import Container1 from './containers/container1';
 // import Component1 from './functional/component1';
 // import Container1 from './containers/container1';
+import Routes from './routes';
 
 class App extends Component{
  render() {
@@ -10,7 +11,7 @@ class App extends Component{
       <div className="App">
         React
 
-        <Container1 />
+        <Routes />
       
       </div>
     )
