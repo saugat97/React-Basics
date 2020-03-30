@@ -20,10 +20,22 @@ export const failure = () => {
     }
 }
 
-export const USER_INPUT = (text) => {
+export const user_input = (text) => {
     return {
         type: ACTION_TYPES.USER_INPUT,
         payload: text //js object in RW
         
+    }
+}
+
+export const login_success = () => {
+    return {
+        type: ACTION_TYPES.LOGIN_SUCCESS
+    }
+}
+
+export const login_failure = () => {
+    return {
+        type: ACTION_TYPES.LOGIN_FAILURE
     }
 }

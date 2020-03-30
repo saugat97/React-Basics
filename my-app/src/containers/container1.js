@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 //import Component1 from '../functional/component1';
 
-import * as ACTION_TYPES from '../store/actions/action_types';
+//import * as ACTION_TYPES from '../store/actions/action_types';
 import * as ACTIONS from '../store/actions/actions';
 
 import { connect } from 'react-redux';
@@ -12,7 +12,9 @@ class Container1 extends Component {
         const user_text = "text 2"
         return (
             <div>
-                {console.log(this.props.stateprop1)}
+                <button onClick={() => this.props.auth.login()} > Login </button>
+
+                <br /> <br /> <br />
                 <button onClick={() => this.props.action1()}> Dispatch Action 1 </button>
                 <button onClick={() => this.props.action2()}> Dispatch Action 2 </button>
                 <button onClick={() => this.props.action_creator1()}> Dispatch Action_creator 1 </button>
@@ -37,7 +39,7 @@ function mapDispatchToProps(dispatch){
         action2: () => dispatch(ACTIONS.FAILURE),
         action_creator1: () => dispatch(ACTIONS.success()),
         action_creator2: () => dispatch(ACTIONS.failure()),
-        action_creator3: (text) => dispatch(ACTIONS.USER_INPUT(text))
+        action_creator3: (text) => dispatch(ACTIONS.user_input(text))
 
     }
 }
